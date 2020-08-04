@@ -47,6 +47,7 @@
 		7E4084CE22DBCFC600D79986 /* soundBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = soundBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E4084D222DBCFC600D79986 /* soundBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soundBoardUITests.swift; sourceTree = "<group>"; };
 		7E4084D422DBCFC600D79986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E40852D22E2327100D79986 /* soundBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = soundBoard.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		7E4084B122DBCFC500D79986 /* soundBoard */ = {
 			isa = PBXGroup;
 			children = (
+				7E40852D22E2327100D79986 /* soundBoard.entitlements */,
 				7E4084B222DBCFC500D79986 /* AppDelegate.swift */,
 				7E4084B422DBCFC500D79986 /* ViewController.swift */,
 				7E4084B622DBCFC600D79986 /* Main.storyboard */,
@@ -193,6 +195,11 @@
 				TargetAttributes = {
 					7E4084AE22DBCFC500D79986 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					7E4084C222DBCFC600D79986 = {
 						CreatedOnToolsVersion = 10.1;
@@ -432,9 +439,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = soundBoard/soundBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DCPZJTLLA6;
 				INFOPLIST_FILE = soundBoard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,9 +459,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = soundBoard/soundBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DCPZJTLLA6;
 				INFOPLIST_FILE = soundBoard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
